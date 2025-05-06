@@ -6,7 +6,7 @@ import NoData from "@/components/error/nodata";
 import { getAuthHeaders } from "@/components/headers";
 
 export const metadata: Metadata = {
-  title: "Properties",
+  title: "Properties | ABIC Realty & Consultancy Corporation",
   description:
     "Browse a diverse selection of properties for sale and rent. Find your dream home or next investment with ABIC Realty's expert listings.",
 

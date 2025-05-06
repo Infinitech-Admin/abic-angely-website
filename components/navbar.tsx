@@ -1,20 +1,45 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 export const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const pathname = usePathname();
-  const router = useRouter(); // Initialize router
+  const [isModalOpen, setModalOpen] = useState(false); // State to control modal visibility
+  const pathname = usePathname(); // Get the current route
+
+  // Check if we are on the "Room Planner" page
+  const isRoomPlannerPage = pathname === "/room-planner";
 
   const toggleSidebar = () => {
     setSidebarOpen((prev) => !prev);
   };
 
+  // Close the sidebar when the route changes
   useEffect(() => {
-    setSidebarOpen(false);
+    setSidebarOpen(false); // Close the sidebar on route change
   }, [pathname]);
+
+  const handleRoomPlannerClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    if (e.currentTarget.getAttribute('href') === '/room-planner') {
+      e.preventDefault();
+      setModalOpen(true); // Open the modal when Room Planner is clicked
+    }
+  };
+
+  const handleModalClose = () => {
+    setModalOpen(false); // Close the modal
+  };
+
+  const handleProceed = () => {
+    // Logic for the "Proceed" button (opens the link in a new window)
+    const roomPlannerUrl = '/room-planner'; // URL for the Room Planner page
+    window.open(roomPlannerUrl, '_blank', 'noopener,noreferrer'); // Opens in a new tab
+    setModalOpen(false); // Close the modal after proceeding
+  };
+
+  if (isRoomPlannerPage) return null; // Don't render Navbar on Room Planner page
 
   return (
     <>
@@ -51,22 +76,20 @@ export const Navbar = () => {
             </svg>
           )}
         </button>
-        <button onClick={() => router.push("/")} className="flex items-center">
+        <Link className="flex items-center" href="/">
           <Image
             alt="ABIC Logo"
             height={80}
             src="https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-logo.png"
             width={80}
           />
-        </button>
+        </Link>
       </div>
 
       {/* Sidebar */}
       <aside
         aria-label="Sidebar"
-        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform bg-cover bg-center bg-no-repeat ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0`}
+        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform bg-cover bg-center bg-no-repeat dark:bg-gray-800 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
         id="logo-sidebar"
       >
         <div
@@ -77,9 +100,9 @@ export const Navbar = () => {
           }}
         >
           {/* Logo Section */}
-          <button
-            onClick={() => router.push("/")}
-            className="flex items-center mb-5 mt-24 py-8 md:mt-0"
+          <Link
+            className="hidden md:flex items-center mb-5 mt-24 py-8 md:mt-0"
+            href="/"
           >
             <Image
               alt="ABIC Logo"
@@ -87,65 +110,92 @@ export const Navbar = () => {
               src="https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-logo.png"
               width={200}
             />
-          </button>
+          </Link>
 
           {/* Navigation Links */}
-          <ul className="space-y-2 py-2 font-medium flex-1">
-            {[
+          <ul className="space-y-1 mt-24 md:mt-2 font-medium flex-1">
+            {[ 
               { path: "/", label: "Home" },
-              { path: "/about", label: "About Me" },
+              { path: "/about", label: "About Us" },
               { path: "/whatsnew", label: "What's New" },
               { path: "/properties", label: "Properties" },
               { path: "/services", label: "Services" },
               { path: "/careers", label: "Careers" },
-              { path: "/contact", label: "Contact Us" },
+              { path: "/contact", label: "Contact Us", external: true },
             ].map((link) => (
               <li key={link.path}>
-                <button
-                  className={`w-full text-left flex items-center p-2 text-white rounded-lg group ${
+                <Link
+                  className={`flex items-center p-2 text-white rounded-lg group ${
                     pathname === link.path
-                      ? "bg-violet-800"
+                      ? "bg-violet-800 font-bold"
                       : "hover:bg-violet-800"
                   }`}
-                  onClick={() => router.push(link.path)}
+                  href={link.path}
                 >
                   <span className="ml-3">{link.label}</span>
-                </button>
+                </Link>
               </li>
             ))}
 
             {/* Separator */}
             <div className="my-4 py-8" />
 
-            {[
+            {/* Additional Links */}
+            {[ 
               { path: "/documents", label: "DMCI Documents" },
               { path: "/submit-property", label: "Submit Property" },
               { path: "/loancalculator", label: "Loan Calculator" },
               {
-                path: "https://roomplanner-nu.vercel.app/roomplanner/abic",
+                path: "/room-planner", // Updated to open in a modal
                 label: "Room Planner",
               },
             ].map((link) => (
               <li key={link.path}>
-                <button
-                  className={`w-full text-left flex items-center p-2 text-white rounded-lg group ${
+                <a
+                  className={`flex items-center p-2 text-white rounded-lg dark:text-white group ${
                     pathname === link.path
-                      ? "bg-violet-800"
-                      : "hover:bg-violet-800"
+                      ? "bg-violet-800 dark:bg-gray-700"
+                      : "hover:bg-violet-800 dark:hover:bg-gray-700"
                   }`}
-                  onClick={() =>
-                    link.path.startsWith("http")
-                      ? window.open(link.path, "_blank")
-                      : router.push(link.path)
-                  }
+                  href={link.path}
+                  onClick={handleRoomPlannerClick}
                 >
                   <span className="ml-3">{link.label}</span>
-                </button>
+                </a>
               </li>
             ))}
           </ul>
+
+          {/* Footer and Chatbot */}
+          {!isRoomPlannerPage && (
+            <div>{/* Footer Content (Social Media Links & Chatbot) */}</div>
+          )}
         </div>
       </aside>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-red-100 p-6 rounded-lg shadow-lg w-full max-w-xs sm:max-w-xs md:max-w-md">
+            <h2 className="text-2xl font-bold text-red-600 mb-4">Room Planner</h2>
+            <p className="text-red-800 text-sm sm:text-base">This feature is optimized for larger screens. For the best experience, please use a device with a larger display.</p>
+            <div className="mt-4 text-right space-x-4">
+              <button
+                className="px-4 py-2 bg-violet-700 text-white rounded-lg text-sm sm:text-base"
+                onClick={handleModalClose}
+              >
+                Close
+              </button>
+              <button
+                className="px-4 py-2 bg-violet-700 text-white rounded-lg text-sm sm:text-base"
+                onClick={handleProceed}
+              >
+                Proceed
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

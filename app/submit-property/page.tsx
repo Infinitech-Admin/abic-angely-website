@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import SubmitPropertyCard from "@/components/card/submitpropertycard";
 
 export const metadata: Metadata = {
-  title: "Submit Your Property",
+  title: "Submit Your Property | ABIC Realty & Consultancy Corporation",
   description:
     "List your property on ABIC Realty to connect with buyers and renters. Get more visibility and reach potential clients with ease.",
 

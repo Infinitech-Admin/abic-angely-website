@@ -7,16 +7,16 @@ import "react-photo-view/dist/react-photo-view.css";
 import { getAuthHeaders } from "@/components/headers";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About | ABIC Realty & Consultancy Corporation",
   description:
     "This page provides detailed information about ABIC Realty, showcasing the services and values we offer. Learn more about our commitment to providing exceptional real estate solutions.",
 
   openGraph: {
-    title: "About | ABIC Realty by Jayvee Valeriano",
+    title: "About | ABIC Realty by Angely Victoriano",
     description:
       "This page provides detailed information about ABIC Realty, showcasing the services and values we offer. Learn more about our commitment to providing exceptional real estate solutions.",
     url: "https://www.abic-website.vercel.app/about",
-    siteName: "ABIC Realty by Jayvee Valeriano",
+    siteName: "ABIC Realty by Angely Victoriano",
     images: [
       {
         url: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-banner.png",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    site: "@AbicRealty by Jayvee Valeriano",
-    creator: "@AbicRealty by Jayvee Valeriano",
-    title: "About | ABIC Realty by Jayvee Valeriano",
+    site: "@AbicRealty by Angely Victoriano",
+    creator: "@AbicRealty by Angely Victoriano",
+    title: "About | ABIC Realty by Angely Victoriano",
     description:
       "Learn more about ABIC Realty, our services, and values in providing top-tier real estate solutions.",
     images: [

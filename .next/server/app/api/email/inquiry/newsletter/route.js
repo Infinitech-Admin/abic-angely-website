@@ -1,0 +1,12 @@
+const CHUNK_PUBLIC_PATH = "server/app/api/email/inquiry/newsletter/route.js";
+const runtime = require("../../../../../chunks/[turbopack]_runtime.js");
+runtime.loadChunk("server/chunks/node_modules_next_34cd0d._.js");
+runtime.loadChunk("server/chunks/node_modules_nodemailer_a9f338._.js");
+runtime.loadChunk("server/chunks/node_modules_entities_lib_esm_8351ac._.js");
+runtime.loadChunk("server/chunks/f0818_prettier_2c862a._.js");
+runtime.loadChunk("server/chunks/node_modules_e32cd6._.js");
+runtime.loadChunk("server/chunks/[root of the server]__6a550d._.js");
+runtime.loadChunk("server/chunks/node_modules_next_dist_compiled_react-dom_server_4af553.js");
+runtime.loadChunk("server/chunks/_63a22d._.js");
+runtime.getOrInstantiateRuntimeModule("[project]/.next-internal/server/app/api/email/inquiry/newsletter/route/actions.js [app-rsc] (ecmascript)", CHUNK_PUBLIC_PATH);
+module.exports = runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/email/inquiry/newsletter/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)", CHUNK_PUBLIC_PATH).exports;

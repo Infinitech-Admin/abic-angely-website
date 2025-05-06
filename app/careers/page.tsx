@@ -4,7 +4,7 @@ import CareersCard from "@/components/card/careerscard";
 import NoData from "@/components/error/nodata";
 
 export const metadata: Metadata = {
-  title: "Career",
+  title: "Career | ABIC Realty & Consultancy Corporation",
   description:
     "Explore exciting career opportunities at ABIC Realty. Join our team and contribute to delivering exceptional real estate solutions.",
 

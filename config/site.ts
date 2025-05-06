@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Abic Realty by Jayvee Valeriano - Real Estate Sales, Leasing, and Rentals",
+  name: "Abic Realty by Angely Victoriano- Real Estate Sales, Leasing, and Rentals",
   template: "Abic Realty and Consultancy Corporation",
   description:
     "Discover condos, offices, and properties for sale, lease, or rent with Abic Realty. Your trusted partner in real estate solutions.",

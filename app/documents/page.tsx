@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import DocumentTable from "@/components/table/documenttable";
 
 export const metadata: Metadata = {
-  title: "DMCI Documents",
+  title: "DMCI Documents | ABIC Realty & Consultancy Corporation",
   description:
     "Access important documents related to DMCI properties, including agreements, floor plans, and other essential information.",
 

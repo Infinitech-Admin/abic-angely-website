@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import ContactSection from "../home/contactsection";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us | ABIC Realty & Consultancy Corporation",
   description:
     "Get in touch with ABIC Realty for inquiries, support, or to learn more about our services. We are here to assist you.",
 

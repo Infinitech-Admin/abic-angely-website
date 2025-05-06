@@ -35,7 +35,7 @@ const LoanCalculator: React.FC = () => {
     label: `${i + 1} Year${i + 1 > 1 ? "s" : ""}`,
   }));
 
-  const months: Option[] = Array.from({ length: 12 }, (_, i) => ({
+  const months: Option[] = Array.from({ length: 11 }, (_, i) => ({
     key: i + 1,
     value: (i + 1).toString(),
     label: `${i + 1} Month${i + 1 > 1 ? "s" : ""}`,
@@ -151,8 +151,8 @@ const LoanCalculator: React.FC = () => {
 
     // Table Rows Data
     const rows = [
-      ["Years", `${selectedYears || 0} Years`],
-      ["Months", `${selectedMonths || 0} Months`],
+      ["Years", `${selectedYears || 0} ${Number(selectedYears) === 1 || Number(selectedYears) === 0 ? 'Year' : 'Years'}`],
+      ["Months", `${selectedMonths || 0} ${Number(selectedMonths) === 1 || Number(selectedMonths) === 0 ? 'Month' : 'Months'}`],
       [
         "Loan Amount",
         `PHP ${parseFloat(loanAmount || "0").toLocaleString(undefined, { minimumFractionDigits: 2 })}`,
@@ -165,6 +165,9 @@ const LoanCalculator: React.FC = () => {
       ["Monthly Payment", "PHP " + (results.monthlyPayment || "0")],
       ["Total Amount", "PHP " + (results.totalAmount || "0")],
     ];
+    
+
+      
 
     // Table Content
     let yPosition = 72;
@@ -241,51 +244,57 @@ const LoanCalculator: React.FC = () => {
       </Card>
 
       <Table aria-label="Loan Calculation Results">
-        <TableHeader>
-          <TableColumn>LOAN DETAILS</TableColumn>
-          <TableColumn>VALUE</TableColumn>
-        </TableHeader>
-        <TableBody>
-          <TableRow key="1">
-            <TableCell>Selected Years</TableCell>
-            <TableCell>{selectedYears} Years</TableCell>
-          </TableRow>
-          <TableRow key="2">
-            <TableCell>Selected Months</TableCell>
-            <TableCell>{selectedMonths} Months</TableCell>
-          </TableRow>
-          <TableRow key="3">
-            <TableCell>Loan Amount</TableCell>
-            <TableCell>
-              ₱{" "}
-              {parseFloat(loanAmount || "0").toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-              })}
-            </TableCell>
-          </TableRow>
-          <TableRow key="4">
-            <TableCell>Interest Rate</TableCell>
-            <TableCell>
-              {parseFloat(interestRate || "0").toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-              })}
-              %
-            </TableCell>
-          </TableRow>
-          <TableRow key="5">
-            <TableCell>Total Loan Amount (w/ interest)</TableCell>
-            <TableCell>₱ {results.totalLoan}</TableCell>
-          </TableRow>
-          <TableRow key="6">
-            <TableCell>Monthly Payment</TableCell>
-            <TableCell>₱ {results.monthlyPayment}</TableCell>
-          </TableRow>
-          <TableRow key="7">
-            <TableCell>Total Amount</TableCell>
-            <TableCell>₱ {results.totalAmount}</TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
+  <TableHeader>
+    <TableColumn>LOAN DETAILS</TableColumn>
+    <TableColumn>VALUE</TableColumn>
+  </TableHeader>
+  <TableBody>
+  <TableRow key="1">
+  <TableCell>Selected Years</TableCell>
+  <TableCell>
+    {selectedYears || 0} {(Number(selectedYears) === 0 || Number(selectedYears) === 1) ? 'Year' : 'Years'}
+  </TableCell>
+</TableRow>
+<TableRow key="2">
+  <TableCell>Selected Months</TableCell>
+  <TableCell>
+    {selectedMonths || 0} {(Number(selectedMonths) === 0 || Number(selectedMonths) === 1) ? 'Month' : 'Months'}
+  </TableCell>
+</TableRow>
+
+    <TableRow key="3">
+      <TableCell>Loan Amount</TableCell>
+      <TableCell>
+        ₱{" "}
+        {parseFloat(loanAmount || "0").toLocaleString(undefined, {
+          minimumFractionDigits: 2,
+        })}
+      </TableCell>
+    </TableRow>
+    <TableRow key="4">
+      <TableCell>Interest Rate</TableCell>
+      <TableCell>
+        {parseFloat(interestRate || "0").toLocaleString(undefined, {
+          minimumFractionDigits: 2,
+        })}
+        %
+      </TableCell>
+    </TableRow>
+    <TableRow key="5">
+      <TableCell>Total Loan Amount (w/ interest)</TableCell>
+      <TableCell>₱ {results.totalLoan}</TableCell>
+    </TableRow>
+    <TableRow key="6">
+      <TableCell>Monthly Payment</TableCell>
+      <TableCell>₱ {results.monthlyPayment}</TableCell>
+    </TableRow>
+    <TableRow key="7">
+      <TableCell>Total Amount</TableCell>
+      <TableCell>₱ {results.totalAmount}</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
 
       <p className="text-sm text-default-500">
         * Please note that the results provided by this calculator are estimates
@@ -316,3 +325,4 @@ const LoanCalculator: React.FC = () => {
 };
 
 export default LoanCalculator;
+        

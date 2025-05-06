@@ -8,7 +8,12 @@ import RatingSection from "./home/ratingsection";
 import ContactSection from "./home/contactsection";
 
 import { getAuthHeaders } from "@/components/headers";
-
+export const generateMetadata = () => {
+  return {
+    title: "ABIC Realty by Angely Victoriano - Real Estates Sales, Leasing and Rentals",
+    description: "Find your dream property with our top listings.",
+  };
+};
 const fetchProperties = async () => {
   try {
     const endpoint = process.env.NEXT_PUBLIC_API_URL;

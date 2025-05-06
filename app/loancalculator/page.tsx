@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import LoanCalculator from "@/components/card/calculator";
 
 export const metadata: Metadata = {
-  title: "Loan Calculator",
+  title: "Loan Calculator | ABIC Realty & Consultancy Corporation",
   description:
     "Use our loan calculator to estimate monthly payments for your real estate purchase. Plan your finances with accurate and reliable calculations.",
 

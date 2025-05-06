@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import ServicesCard from "@/components/card/servicescard";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Our Services | ABIC Realty & Consultancy Corporation",
   description:
     "Explore ABIC Realty's professional real estate services, including property buying, selling, leasing, and investment advisory. Let us help you find the perfect property.",
 

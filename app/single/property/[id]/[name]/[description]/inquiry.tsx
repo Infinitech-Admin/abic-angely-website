@@ -15,8 +15,10 @@ const validationSchema = Yup.object({
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
-  phone: Yup.string()
+    phone: Yup.string()
     .matches(/^[0-9]+$/, "Phone number must be numeric")
+    .matches(/^09/, "Phone number must start with 09")
+    .length(11, "Phone number must be exactly 11 digits")
     .required("Phone number is required"),
   message: Yup.string().required("Message is required"),
 });
@@ -147,11 +149,16 @@ const PropertyInquiry: React.FC<PropertyProps> = ({ data }) => {
           <Input
             label="Phone Number"
             name="phone"
-            placeholder="e.g. 9924401097"
+            placeholder="e.g. 09924401097"
             type="text"
             value={formik.values.phone}
             onBlur={formik.handleBlur}
-            onChange={formik.handleChange}
+            onChange={(e) => {
+              const numericOnly = e.target.value.replace(/[^0-9]/g, "");
+              if (numericOnly.length <= 11) {
+                formik.setFieldValue("phone", numericOnly);
+              }
+            }}
           />
           {formik.touched.phone && formik.errors.phone && (
             <p className="text-red-500 text-sm">{formik.errors.phone}</p>

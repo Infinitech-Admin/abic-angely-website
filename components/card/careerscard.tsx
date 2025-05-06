@@ -37,8 +37,10 @@ const validationSchema = Yup.object({
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
-  phone: Yup.string()
-    .matches(/^\d{10,12}$/, "Phone number must be between 10 and 12 digits")
+ phone: Yup.string()
+    .matches(/^[0-9]+$/, "Phone number must be numeric")
+    .matches(/^09/, "Phone number must start with 09")
+    .length(11, "Phone number must be exactly 11 digits")
     .required("Phone number is required"),
   address: Yup.string().required("Address is required"),
   resume: Yup.mixed<File>()
@@ -239,19 +241,23 @@ const CareersCard: React.FC<CareersProps> = ({ career }) => {
                       </p>
                     )}
                     <Input
-                      label="Phone Number"
-                      name="phone"
-                      placeholder="eg. 09924401097"
-                      type="text"
-                      value={formik.values.phone}
-                      onBlur={formik.handleBlur}
-                      onChange={formik.handleChange}
-                    />
-                    {formik.touched.phone && formik.errors.phone && (
-                      <p className="text-red-500 text-sm">
-                        {formik.errors.phone}
-                      </p>
-                    )}
+                                label="Phone Number"
+                                name="phone"
+                                placeholder="e.g. 09924401097"
+                                type="text"
+                                value={formik.values.phone}
+                                onBlur={formik.handleBlur}
+                                onChange={(e) => {
+                                  const numericOnly = e.target.value.replace(/[^0-9]/g, "");
+                                  if (numericOnly.length <= 11) {
+                                    formik.setFieldValue("phone", numericOnly);
+                                  }
+                                }}
+                              />
+                              {formik.touched.phone && formik.errors.phone && (
+                                <p className="text-red-500 text-sm">{formik.errors.phone}</p>
+                              )}
+                    
                     <Input
                       label="Address"
                       name="address"
