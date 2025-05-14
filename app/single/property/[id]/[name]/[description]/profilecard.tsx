@@ -34,7 +34,7 @@ const AgentProfile: React.FC<ProfileProps> = ({ agent }) => {
 
   const profile = agent.profile ?? {};
   const profileImage = profile.image
-    ? `https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/profiles/${profile.image}`
+    ? `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}profiles/${profile.image}`
     : "/default-avatar.png";
 
   return (

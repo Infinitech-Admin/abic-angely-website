@@ -110,7 +110,7 @@ const PropertyImage: React.FC<PropertyProps> = ({ properties }) => {
               <img
                 alt={`Slide ${index}`}
                 className="w-full max-h-[250px] md:max-h-[600px] object-cover rounded-lg object-center overflow-hidden"
-                src={`https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/properties/images/${image}`}
+                src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}properties/images/${image}`}
                 width={1000}
               />
             </div>
@@ -141,7 +141,7 @@ const PropertyImage: React.FC<PropertyProps> = ({ properties }) => {
             <Image
               alt={`Thumbnail ${index}`}
               className="h-[50px] lg:h-[100px] w-52 object-cover rounded-lg object-center overflow-hidden"
-              src={`https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/properties/images/${image}`}
+              src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}properties/images/${image}`}
             />
           </div>
         ))}

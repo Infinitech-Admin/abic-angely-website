@@ -61,7 +61,7 @@ const metadata = {
         siteName: "ABIC Realty",
         images: [
             {
-                url: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-contact-banner.png",
+                url: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-realty-contact-banner.png`,
                 width: 1200,
                 height: 630,
                 alt: "ABIC Realty Contact Information"
@@ -77,7 +77,7 @@ const metadata = {
         title: "Contact Us | ABIC Realty",
         description: "Have questions? Contact ABIC Realty for support, inquiries, or more information about our real estate services.",
         images: [
-            "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-contact-banner.png"
+            `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-realty-contact-banner.png`
         ]
     },
     other: {

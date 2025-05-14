@@ -15,10 +15,10 @@
     "static/chunks/node_modules_react-icons_lu_index_mjs_26d8a9._.js",
     "static/chunks/node_modules_react-icons_lib_74ccc9._.js",
     "static/chunks/node_modules_react-chatbotify_dist_index_b0f9a1.js",
-    "static/chunks/node_modules_d51be9._.js",
+    "static/chunks/node_modules_50a6ec._.js",
     "static/chunks/[root of the server]__1b9c57._.js",
     "static/chunks/[root of the server]__2e76ea._.css",
-    "static/chunks/node_modules_@nextui-org_dom-animation_dist_index_mjs_7f9540._.js"
+    "static/chunks/node_modules_@nextui-org_dom-animation_dist_index_mjs_ae075a._.js"
   ],
   "source": "dynamic"
 });

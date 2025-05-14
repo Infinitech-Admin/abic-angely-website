@@ -267,7 +267,7 @@ const metadata = {
         siteName: "ABIC Realty",
         images: [
             {
-                url: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-careers-banner.png",
+                url: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-realty-careers-banner.png`,
                 width: 1200,
                 height: 630,
                 alt: "Join the ABIC Realty team"
@@ -283,7 +283,7 @@ const metadata = {
         title: "Career | ABIC Realty",
         description: "Discover career opportunities at ABIC Realty and become part of our mission to deliver top-tier real estate solutions.",
         images: [
-            "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-careers-banner.png"
+            `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-realty-careers-banner.png`
         ]
     },
     other: {

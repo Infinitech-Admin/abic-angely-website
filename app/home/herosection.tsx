@@ -15,7 +15,7 @@ const HeroSection = () => {
         loop
         muted
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-hero-bg.mp4"
+        src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-hero-bg.mp4`}
       />
 
       {/* Overlay Content */}
@@ -24,7 +24,7 @@ const HeroSection = () => {
         <Image
           alt="NextUI hero Image"
           className="w-auto h-96 md:h-auto md:max-w-screen-lg relative mt-0 pt-0"
-          src="https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-hero-overlay.png"
+          src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-hero-overlay.png`}
         />
 
         <div className="absolute top-1/2 px-4 sm:ml-16 transform -translate-y-1/2 z-20 text-white">

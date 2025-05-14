@@ -16,7 +16,7 @@ const Gallery: React.FC<VideosProps> = ({ videos }) => {
     <PhotoProvider>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-2 py-8">
         {videos.map((media, index) => {
-          const videoUrl = `https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/videos/${media.video}`;
+          const videoUrl = `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}videos/${media.video}`;
 
           return (
             <PhotoView key={index} src={videoUrl}>

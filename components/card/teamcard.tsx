@@ -36,7 +36,7 @@ export default function TeamCard({ team }: TeamCardProps) {
                 alt={member.name}
                 className="w-full h-72 object-cover object-top"
                 loading="lazy"
-                src={`https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/profiles/${member.profile.image}`}
+                src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}profiles/${member.profile.image}`}
               />
             </CardBody>
             <CardFooter className="flex flex-col text-center">

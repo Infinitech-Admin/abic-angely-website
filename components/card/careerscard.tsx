@@ -141,7 +141,7 @@ const CareersCard: React.FC<CareersProps> = ({ career }) => {
                 <div className="w-full">
                   <Image
                     alt="HeroUI hero Image"
-                    src="https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-careers.png"
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-careers.png`}
                     width={1000}
                   />
                 </div>

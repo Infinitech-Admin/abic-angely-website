@@ -222,7 +222,7 @@ const Navbar = ()=>{
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             alt: "ABIC Logo",
                             height: 80,
-                            src: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-logo.png",
+                            src: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-realty-logo.png`,
                             width: 80
                         }, void 0, false, {
                             fileName: "[project]/components/navbar.tsx",
@@ -247,7 +247,7 @@ const Navbar = ()=>{
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "h-full flex flex-col px-3 py-2 overflow-y-auto bg-cover bg-no-repeat",
                     style: {
-                        backgroundImage: "url('https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-sidebar.png')"
+                        backgroundImage: `url(${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-sidebar.png)`
                     },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -256,7 +256,7 @@ const Navbar = ()=>{
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 alt: "ABIC Logo",
                                 height: 200,
-                                src: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-logo.png",
+                                src: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-realty-logo.png`,
                                 width: 200
                             }, void 0, false, {
                                 fileName: "[project]/components/navbar.tsx",
@@ -1178,14 +1178,14 @@ const Chatbot = ()=>{
             },
             header: {
                 title: "ABIC REALTY",
-                avatar: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-logo.png"
+                avatar: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-logo.png`
             },
             botBubble: {
                 showAvatar: true,
-                avatar: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-logo.png"
+                avatar: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-logo.png`
             },
             chatButton: {
-                icon: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-logo.png"
+                icon: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-logo.png`
             },
             tooltip: {
                 mode: "NEVER"
@@ -1291,40 +1291,68 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/link.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$image$2f$dist$2f$chunk$2d$VKW4DPLJ$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__image_default__as__Image$3e$__ = __turbopack_import__("[project]/node_modules/@nextui-org/image/dist/chunk-VKW4DPLJ.mjs [app-ssr] (ecmascript) <export image_default as Image>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$lu$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-icons/lu/index.mjs [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
 ;
 ;
-;
-// Social Media Icons Configuration
+// Social Media Icons Configuration using react-icons
 const socialMediaConfig = [
     {
         id: 1,
         field: "facebook",
-        image: "https://dmci-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/facebook.png"
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$lu$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LuFacebook"], {
+            className: "text-white w-6 h-6"
+        }, void 0, false, {
+            fileName: "[project]/components/floatingicon.tsx",
+            lineNumber: 10,
+            columnNumber: 37
+        }, this)
     },
     {
         id: 2,
         field: "phone",
-        image: "https://dmci-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/phone-call.png"
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$lu$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LuPhone"], {
+            className: "text-white w-6 h-6"
+        }, void 0, false, {
+            fileName: "[project]/components/floatingicon.tsx",
+            lineNumber: 11,
+            columnNumber: 34
+        }, this)
     },
     {
         id: 3,
         field: "email",
-        image: "https://dmci-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/mail.png"
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$lu$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LuMail"], {
+            className: "text-white w-6 h-6"
+        }, void 0, false, {
+            fileName: "[project]/components/floatingicon.tsx",
+            lineNumber: 12,
+            columnNumber: 34
+        }, this)
     },
     {
         id: 4,
         field: "viber",
-        image: "https://dmci-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/viber+(1).png"
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$lu$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LuMessageCircle"], {
+            className: "text-white w-6 h-6"
+        }, void 0, false, {
+            fileName: "[project]/components/floatingicon.tsx",
+            lineNumber: 13,
+            columnNumber: 34
+        }, this)
     },
     {
         id: 5,
         field: "telegram",
-        image: "https://dmci-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/telegram+(2).png"
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$lu$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LuSend"], {
+            className: "text-white w-6 h-6"
+        }, void 0, false, {
+            fileName: "[project]/components/floatingicon.tsx",
+            lineNumber: 14,
+            columnNumber: 37
+        }, this)
     }
 ];
 const FloatingIcons = ()=>{
@@ -1334,12 +1362,9 @@ const FloatingIcons = ()=>{
         const fetchSocialLinks = async ()=>{
             try {
                 const agent_id = ("TURBOPACK compile-time value", "01JJJWM9FWPAFZT37386QYR5C4");
-                // const agent_id = "01JJ8BV4GJXPF64PB20H0AAEH7"
                 const response = await fetch(`${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/api/main")}/all-users`);
                 if (!response.ok) throw new Error("Failed to fetch social links");
                 const data = await response.json();
-                console.log("Fetched Data:", data);
-                // Find the agent matching the `agent_id`
                 const agent = data.record.find((a)=>a.id === agent_id);
                 if (agent && agent.profile) {
                     setSocialLinks({
@@ -1370,29 +1395,20 @@ const FloatingIcons = ()=>{
                             rel: "noopener noreferrer",
                             target: socialLinks[icon.field] ? "_blank" : "_self",
                             className: `bg-blue-700 p-2 rounded-full shadow-lg hover:bg-blue-800 transition ${!socialLinks[icon.field] && "opacity-50 cursor-not-allowed"}`,
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$image$2f$dist$2f$chunk$2d$VKW4DPLJ$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__image_default__as__Image$3e$__["Image"], {
-                                alt: icon.field,
-                                height: 32,
-                                src: icon.image,
-                                width: 32
-                            }, void 0, false, {
-                                fileName: "[project]/components/floatingicon.tsx",
-                                lineNumber: 73,
-                                columnNumber: 15
-                            }, this)
+                            children: icon.icon
                         }, icon.id, false, {
                             fileName: "[project]/components/floatingicon.tsx",
-                            lineNumber: 65,
+                            lineNumber: 57,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/floatingicon.tsx",
-                    lineNumber: 63,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/floatingicon.tsx",
-                lineNumber: 62,
+                lineNumber: 54,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1401,30 +1417,21 @@ const FloatingIcons = ()=>{
                     className: "fixed bottom-4 right-4 flex flex-col items-end gap-2 lg:hidden",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: `flex flex-col gap-2 transition-all ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 pointer-events-none"} lg:opacity-100 lg:translate-y-0 sm:pointer-events-auto`,
+                            className: `flex flex-col gap-2 transition-all ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 pointer-events-none"}`,
                             children: socialMediaConfig.map((icon)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: socialLinks[icon.field] || "#",
                                     rel: "noopener noreferrer",
                                     target: socialLinks[icon.field] ? "_blank" : "_self",
                                     className: `bg-blue-700 p-2 rounded-full shadow-lg hover:bg-blue-800 transition ${!socialLinks[icon.field] && "opacity-50 cursor-not-allowed"}`,
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$image$2f$dist$2f$chunk$2d$VKW4DPLJ$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__image_default__as__Image$3e$__["Image"], {
-                                        alt: icon.field,
-                                        height: 32,
-                                        src: icon.image,
-                                        width: 32
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/floatingicon.tsx",
-                                        lineNumber: 95,
-                                        columnNumber: 17
-                                    }, this)
+                                    children: icon.icon
                                 }, icon.id, false, {
                                     fileName: "[project]/components/floatingicon.tsx",
-                                    lineNumber: 87,
+                                    lineNumber: 75,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/floatingicon.tsx",
-                            lineNumber: 82,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1434,29 +1441,29 @@ const FloatingIcons = ()=>{
                                 className: "text-white w-6 h-6"
                             }, void 0, false, {
                                 fileName: "[project]/components/floatingicon.tsx",
-                                lineNumber: 105,
+                                lineNumber: 92,
                                 columnNumber: 23
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$lu$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LuGlobe"], {
                                 className: "text-white w-6 h-6"
                             }, void 0, false, {
                                 fileName: "[project]/components/floatingicon.tsx",
-                                lineNumber: 105,
+                                lineNumber: 92,
                                 columnNumber: 64
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/floatingicon.tsx",
-                            lineNumber: 101,
+                            lineNumber: 88,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/floatingicon.tsx",
-                    lineNumber: 81,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/floatingicon.tsx",
-                lineNumber: 80,
+                lineNumber: 71,
                 columnNumber: 7
             }, this)
         ]

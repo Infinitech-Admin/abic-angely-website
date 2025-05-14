@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "ABIC Realty",
     images: [
       {
-        url: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-documents-banner.png", // Replace with an actual relevant image
+        url: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-realty-documents-banner.png`, // Replace with an actual relevant image
         width: 1200,
         height: 630,
         alt: "Important DMCI Property Documents",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description:
       "Browse and download important documents related to DMCI properties, including agreements, floor plans, and legal files.",
     images: [
-      "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-documents-banner.png", // Ensure this is a valid image
+      `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-realty-documents-banner.png`, // Ensure this is a valid image
     ],
   },
 

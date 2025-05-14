@@ -84,7 +84,7 @@ export default function ServiceDeetsComponent({
                 isZoomed
                 alt={service.record.name}
                 height={500}
-                src={`https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/services/${service.record.image}`}
+                src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}services/${service.record.image}`}
                 width={1000}
               />
             </div>

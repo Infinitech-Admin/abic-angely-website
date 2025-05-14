@@ -28,7 +28,7 @@ const Certificates: React.FC<CertificateProps> = ({ certificates }) => {
     <PhotoProvider>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-2 py-6">
         {certificates.map((certificate) => {
-          const imageUrl = `https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/certificates/${certificate.image}`;
+          const imageUrl = `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}certificates/${certificate.image}`;
 
           return (
             <Card key={certificate.id}>

@@ -56,7 +56,7 @@ const validationSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
     last_name: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yup$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.string().required("Last name is required"),
     first_name: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yup$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.string().required("First name is required"),
     email: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yup$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.string().email("Invalid email address").required("Email is required"),
-    phone: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yup$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.string().matches(/^[0-9]+$/, "Phone number must be numeric").required("Phone number is required"),
+    phone: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yup$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.string().matches(/^[0-9]+$/, "Phone number must be numeric").matches(/^09/, "Phone number must start with 09").length(11, "Phone number must be exactly 11 digits").required("Phone number is required"),
     message: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$yup$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.string().required("Message is required")
 });
 const ContactCard = ()=>{
@@ -125,7 +125,7 @@ const ContactCard = ()=>{
                 reverseOrder: false
             }, void 0, false, {
                 fileName: "[project]/components/card/contactcard.tsx",
-                lineNumber: 108,
+                lineNumber: 110,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -144,12 +144,12 @@ const ContactCard = ()=>{
                                 children: item.label
                             }, item.key, false, {
                                 fileName: "[project]/components/card/contactcard.tsx",
-                                lineNumber: 119,
+                                lineNumber: 121,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 110,
+                        lineNumber: 112,
                         columnNumber: 9
                     }, this),
                     formik.touched.type && formik.errors.type && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -157,7 +157,7 @@ const ContactCard = ()=>{
                         children: formik.errors.type
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 125,
+                        lineNumber: 127,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$react$2f$node_modules$2f40$nextui$2d$org$2f$input$2f$dist$2f$chunk$2d$I5HUX6BY$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__input_default__as__Input$3e$__["Input"], {
@@ -170,7 +170,7 @@ const ContactCard = ()=>{
                         onChange: formik.handleChange
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 128,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this),
                     formik.touched.last_name && formik.errors.last_name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -178,7 +178,7 @@ const ContactCard = ()=>{
                         children: formik.errors.last_name
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 138,
+                        lineNumber: 140,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$react$2f$node_modules$2f40$nextui$2d$org$2f$input$2f$dist$2f$chunk$2d$I5HUX6BY$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__input_default__as__Input$3e$__["Input"], {
@@ -191,7 +191,7 @@ const ContactCard = ()=>{
                         onChange: formik.handleChange
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 141,
+                        lineNumber: 143,
                         columnNumber: 9
                     }, this),
                     formik.touched.first_name && formik.errors.first_name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -199,7 +199,7 @@ const ContactCard = ()=>{
                         children: formik.errors.first_name
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 151,
+                        lineNumber: 153,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$react$2f$node_modules$2f40$nextui$2d$org$2f$input$2f$dist$2f$chunk$2d$I5HUX6BY$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__input_default__as__Input$3e$__["Input"], {
@@ -212,7 +212,7 @@ const ContactCard = ()=>{
                         onChange: formik.handleChange
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 154,
+                        lineNumber: 156,
                         columnNumber: 9
                     }, this),
                     formik.touched.email && formik.errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -220,29 +220,34 @@ const ContactCard = ()=>{
                         children: formik.errors.email
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 164,
+                        lineNumber: 166,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$react$2f$node_modules$2f40$nextui$2d$org$2f$input$2f$dist$2f$chunk$2d$I5HUX6BY$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__input_default__as__Input$3e$__["Input"], {
                         label: "Phone Number",
                         name: "phone",
-                        placeholder: "e.g. 9924401097",
+                        placeholder: "e.g. 09924401097",
                         type: "text",
                         value: formik.values.phone,
                         onBlur: formik.handleBlur,
-                        onChange: formik.handleChange
+                        onChange: (e)=>{
+                            const numericOnly = e.target.value.replace(/[^0-9]/g, "");
+                            if (numericOnly.length <= 11) {
+                                formik.setFieldValue("phone", numericOnly);
+                            }
+                        }
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 167,
-                        columnNumber: 9
+                        lineNumber: 169,
+                        columnNumber: 1
                     }, this),
                     formik.touched.phone && formik.errors.phone && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-red-500 text-sm",
                         children: formik.errors.phone
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 177,
-                        columnNumber: 11
+                        lineNumber: 184,
+                        columnNumber: 3
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$react$2f$node_modules$2f40$nextui$2d$org$2f$input$2f$dist$2f$chunk$2d$TOANJWAK$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__textarea_default__as__Textarea$3e$__["Textarea"], {
                         className: "w-full",
@@ -254,7 +259,7 @@ const ContactCard = ()=>{
                         onChange: formik.handleChange
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 180,
+                        lineNumber: 187,
                         columnNumber: 9
                     }, this),
                     formik.touched.message && formik.errors.message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -262,7 +267,7 @@ const ContactCard = ()=>{
                         children: formik.errors.message
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 190,
+                        lineNumber: 197,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$react$2f$node_modules$2f40$nextui$2d$org$2f$button$2f$dist$2f$chunk$2d$G5TSEPD3$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__button_default__as__Button$3e$__["Button"], {
@@ -273,13 +278,13 @@ const ContactCard = ()=>{
                         children: loading ? "Sending Inquiry..." : "Send Inquiry"
                     }, void 0, false, {
                         fileName: "[project]/components/card/contactcard.tsx",
-                        lineNumber: 193,
+                        lineNumber: 200,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/card/contactcard.tsx",
-                lineNumber: 109,
+                lineNumber: 111,
                 columnNumber: 7
             }, this)
         ]
@@ -1143,6 +1148,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$card$2f$dist$2f$chunk$2d$46NETW2U$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__card_default__as__Card$3e$__ = __turbopack_import__("[project]/node_modules/@nextui-org/card/dist/chunk-46NETW2U.mjs [app-client] (ecmascript) <export card_default as Card>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$card$2f$dist$2f$chunk$2d$5ALFRFZW$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__card_body_default__as__CardBody$3e$__ = __turbopack_import__("[project]/node_modules/@nextui-org/card/dist/chunk-5ALFRFZW.mjs [app-client] (ecmascript) <export card_body_default as CardBody>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$image$2f$dist$2f$chunk$2d$VKW4DPLJ$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__image_default__as__Image$3e$__ = __turbopack_import__("[project]/node_modules/@nextui-org/image/dist/chunk-VKW4DPLJ.mjs [app-client] (ecmascript) <export image_default as Image>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$modal$2f$dist$2f$chunk$2d$KMN6V4NS$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__modal_default__as__Modal$3e$__ = __turbopack_import__("[project]/node_modules/@nextui-org/modal/dist/chunk-KMN6V4NS.mjs [app-client] (ecmascript) <export modal_default as Modal>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$modal$2f$dist$2f$chunk$2d$RE5G2YMK$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__modal_content_default__as__ModalContent$3e$__ = __turbopack_import__("[project]/node_modules/@nextui-org/modal/dist/chunk-RE5G2YMK.mjs [app-client] (ecmascript) <export modal_content_default as ModalContent>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$modal$2f$dist$2f$chunk$2d$3S23ARPO$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__modal_header_default__as__ModalHeader$3e$__ = __turbopack_import__("[project]/node_modules/@nextui-org/modal/dist/chunk-3S23ARPO.mjs [app-client] (ecmascript) <export modal_header_default as ModalHeader>");
@@ -1175,7 +1181,7 @@ const WhatsNewCard = ({ data })=>{
                                 item.image ? item.image.includes("mp4") ? /* eslint-disable-next-line jsx-a11y/media-has-caption */ /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
                                     controls: true,
                                     className: "w-full object-cover object-center rounded-xl h-[250px]",
-                                    src: `https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/articles/${item.image}`
+                                    src: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}articles/${item.image}`
                                 }, void 0, false, {
                                     fileName: "[project]/components/card/whatsnewcard.tsx",
                                     lineNumber: 45,
@@ -1186,7 +1192,7 @@ const WhatsNewCard = ({ data })=>{
                                     alt: "Card background",
                                     className: "w-full object-cover object-center rounded-xl",
                                     height: 250,
-                                    src: `https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/articles/${item.image}`,
+                                    src: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}articles/${item.image}`,
                                     width: 500
                                 }, void 0, false, {
                                     fileName: "[project]/components/card/whatsnewcard.tsx",
@@ -1301,7 +1307,7 @@ const WhatsNewCard = ({ data })=>{
                                                 alt: "Modal background",
                                                 className: "w-full object-cover object-center rounded-xl",
                                                 height: 400,
-                                                src: `https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/articles/${selectedItem?.image}`,
+                                                src: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}articles/${selectedItem?.image}`,
                                                 width: 800
                                             }, void 0, false, {
                                                 fileName: "[project]/components/card/whatsnewcard.tsx",

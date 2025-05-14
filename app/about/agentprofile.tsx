@@ -33,7 +33,7 @@ const AgentProfile: React.FC<ProfileProps> = ({ profile }) => {
             <Image
               alt={profile.name}
               className="object-cover object-top w-full h-full"
-              src={`https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/profiles/${profile.profile.image}`}
+              src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}profiles/${profile.profile.image}`}
             />
           </div>
 

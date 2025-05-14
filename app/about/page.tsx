@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "ABIC Realty by Angely Victoriano",
     images: [
       {
-        url: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-banner.png",
+        url: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-realty-banner.png`,
         width: 1200,
         height: 630,
         alt: "ABIC Realty team providing real estate solutions",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       "Learn more about ABIC Realty, our services, and values in providing top-tier real estate solutions.",
     images: [
-      "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-banner.png",
+      `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-realty-banner.png`,
     ],
   },
 

@@ -1,13 +1,9 @@
 {
   "/page": "app/page.js",
-  "/api/email/inquiry/newsletter/route": "app/api/email/inquiry/newsletter/route.js",
   "/about/page": "app/about/page.js",
   "/whatsnew/page": "app/whatsnew/page.js",
   "/properties/page": "app/properties/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/room-planner/page": "app/room-planner/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/careers/page": "app/careers/page.js",
   "/services/page": "app/services/page.js",
-  "/loancalculator/page": "app/loancalculator/page.js"
+  "/careers/page": "app/careers/page.js",
+  "/contact/page": "app/contact/page.js"
 }

@@ -33,9 +33,9 @@ const ServicesCard = () => {
                 isZoomed
                 alt="Card background"
                 className="rounded-xl"
-                fallbackSrc="https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-fallback1.png"
+                fallbackSrc={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-fallback1.png`}
                 height={250}
-                src={`https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/services/${service.image}`}
+                src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}services/${service.image}`}
                 width={500}
               />
               <div className="py-4">

@@ -61,7 +61,7 @@ const metadata = {
         siteName: "ABIC Realty",
         images: [
             {
-                url: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-services-banner.png",
+                url: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-realty-services-banner.png`,
                 width: 1200,
                 height: 630,
                 alt: "ABIC Realty Services"
@@ -77,7 +77,7 @@ const metadata = {
         title: "Our Services | ABIC Realty",
         description: "Discover ABIC Realty’s expert real estate services. We assist with property buying, selling, leasing, and investment advisory.",
         images: [
-            "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-services-banner.png"
+            `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-realty-services-banner.png`
         ]
     },
     other: {

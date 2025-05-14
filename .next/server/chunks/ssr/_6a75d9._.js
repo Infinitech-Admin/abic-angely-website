@@ -40,7 +40,7 @@ const PropertyCard = ({ property })=>{
     try {
         const images = JSON.parse(property.images || "[]");
         if (Array.isArray(images) && images.length > 0) {
-            imageUrl = `https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/properties/images/${images[0]}`;
+            imageUrl = `${"TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/"}properties/images/${images[0]}`;
         }
     } catch (error) {
         throw new Error("Error parsing images: " + error);
@@ -92,7 +92,7 @@ const PropertyCard = ({ property })=>{
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$image$2f$dist$2f$chunk$2d$VKW4DPLJ$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__image_default__as__Image$3e$__["Image"], {
                                 alt: property.name,
                                 className: "object-cover rounded-xl h-[250px] md:h-52 object-center",
-                                fallbackSrc: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-fallback1.png",
+                                fallbackSrc: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-fallback1.png`,
                                 src: imageUrl,
                                 width: 450
                             }, void 0, false, {

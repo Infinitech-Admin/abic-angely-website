@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "ABIC Realty",
     images: [
       {
-        url: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-contact-banner.png", // Replace with actual contact page image
+        url: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-realty-contact-banner.png`, // Replace with actual contact page image
         width: 1200,
         height: 630,
         alt: "ABIC Realty Contact Information",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description:
       "Have questions? Contact ABIC Realty for support, inquiries, or more information about our real estate services.",
     images: [
-      "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-realty-contact-banner.png", // Ensure this is a valid image
+      `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-realty-contact-banner.png`, // Ensure this is a valid image
     ],
   },
 

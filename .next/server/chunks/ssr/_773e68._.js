@@ -86,9 +86,9 @@ const ServicesCard = ()=>{
                                 isZoomed: true,
                                 alt: "Card background",
                                 className: "rounded-xl",
-                                fallbackSrc: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-fallback1.png",
+                                fallbackSrc: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}media/abic-fallback1.png`,
                                 height: 250,
-                                src: `https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/services/${service.image}`,
+                                src: `${("TURBOPACK compile-time value", "https://abicmanpowerservicecorp.com/")}services/${service.image}`,
                                 width: 500
                             }, void 0, false, {
                                 fileName: "[project]/components/card/servicescard.tsx",

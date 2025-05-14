@@ -4,7 +4,7 @@ const nextConfig = {
     domains: [
       'i.ibb.co',
       'dmcicorporation.com',
-      'abic-agent-bakit.s3.ap-southeast-1.amazonaws.com',
+      'abicmanpowerservicecorp.com',
       'dmci-agent-bakit.s3.amazonaws.com', // Add this line
     ], 
   },

@@ -22,7 +22,7 @@ const FAQSection = () => {
           <div>
             <Image
               alt="HeroUI hero Image"
-              src="https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/Questions-rafiki.png"
+              src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/Questions-rafiki.png`}
             />
           </div>
           <div>

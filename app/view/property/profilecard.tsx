@@ -10,7 +10,7 @@ const AgentData = [
     email: "abicrealty.jayvee@gmail.com",
     phone: "09265536964",
     images:
-      "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/agent/abic-jayvee.jpg",
+       `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}agent/abic-jayvee.jpg`,
     facebook: "https://www.facebook.com/share/15DFEfQXNj/",
   },
 ];

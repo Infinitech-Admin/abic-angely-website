@@ -25,7 +25,7 @@ export const InquiryMail = ({ type, name, sender_email, phone, message }: any) =
           <Img
             alt="Abic Realty Corp"
             height="80"
-            src="https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/ABIC+Realty.png"
+            src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/ABIC+Realty.png`}
           />
           <Hr style={hr} />
           <Text style={paragraph}>Dear Abic Realty Team,</Text>

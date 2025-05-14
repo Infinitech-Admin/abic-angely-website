@@ -87,7 +87,7 @@ const Nearby: React.FC<PropertyProps> = ({ properties, currentPropertyId }) => {
                         fallbackSrc={defaultImage}
                         src={
                           parsedImages.length > 0
-                            ? `https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/properties/images/${parsedImages[0]}`
+                            ? `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}properties/images/${parsedImages[0]}`
                             : defaultImage
                         }
                         width={450}

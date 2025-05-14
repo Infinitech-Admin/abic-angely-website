@@ -45,7 +45,7 @@ const WhatsNewCard: React.FC<DataProps> = ({ data }) => {
                   <video
                     controls
                     className="w-full object-cover object-center rounded-xl h-[250px]"
-                    src={`https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/articles/${item.image}`}
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}articles/${item.image}`}
                   />
                 ) : (
                   <Image
@@ -54,7 +54,7 @@ const WhatsNewCard: React.FC<DataProps> = ({ data }) => {
                     alt="Card background"
                     className="w-full object-cover object-center rounded-xl"
                     height={250}
-                    src={`https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/articles/${item.image}`}
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}articles/${item.image}`}
                     width={500}
                   />
                 )
@@ -111,7 +111,7 @@ const WhatsNewCard: React.FC<DataProps> = ({ data }) => {
                     alt="Modal background"
                     className="w-full object-cover object-center rounded-xl"
                     height={400}
-                    src={`https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/articles/${selectedItem?.image}`}
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}articles/${selectedItem?.image}`}
                     width={800}
                   />
                   {/* {selectedItem?.image ? (

@@ -92,8 +92,8 @@ const RatingSection = () => {
             <div
               className="col-span-2 relative flex items-center justify-center p-8 rounded-xl"
               style={{
-                backgroundImage:
-                  "url('https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/ABIC+Realty+Banner.png')",
+           backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/ABIC+Realty+Banner.png)`,
+
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

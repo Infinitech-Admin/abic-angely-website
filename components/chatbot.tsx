@@ -102,15 +102,15 @@ const Chatbot = () => {
         header: {
           title: "ABIC REALTY",
           avatar:
-            "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-logo.png",
+             `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-logo.png`,
         },
         botBubble: {
           showAvatar: true,
           avatar:
-            "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-logo.png",
+            `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-logo.png`,
         },
         chatButton: {
-          icon: "https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-logo.png",
+          icon: `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-logo.png`,
         },
         tooltip: {
           mode: "NEVER",

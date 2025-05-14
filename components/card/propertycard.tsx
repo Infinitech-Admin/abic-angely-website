@@ -33,7 +33,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
     const images: string[] = JSON.parse(property.images || "[]");
 
     if (Array.isArray(images) && images.length > 0) {
-      imageUrl = `https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/properties/images/${images[0]}`;
+      imageUrl = `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}properties/images/${images[0]}`;
     }
   } catch (error) {
     throw new Error("Error parsing images: " + error);
@@ -68,7 +68,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
             <Image
               alt={property.name}
               className="object-cover rounded-xl h-[250px] md:h-52 object-center"
-              fallbackSrc="https://abic-agent-bakit.s3.ap-southeast-1.amazonaws.com/media/abic-fallback1.png"
+              fallbackSrc={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-fallback1.png`}
               src={imageUrl}
               width={450}
             />
