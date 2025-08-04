@@ -80,7 +80,7 @@ export const Navbar = () => {
           <Image
             alt="ABIC Logo"
             height={80}
-            src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-realty-logo.png`}
+            src="/abic-realty-logo.png"
             width={80}
           />
         </Link>
@@ -95,8 +95,8 @@ export const Navbar = () => {
         <div
           className="h-full flex flex-col px-3 py-2 overflow-y-auto bg-cover bg-no-repeat"
           style={{
-           backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-sidebar.png)`,
-
+            backgroundImage:
+              "url('https://abicrealtyphdianne.com/media/abic-sidebar.png')",
           }}
         >
           {/* Logo Section */}
@@ -107,7 +107,7 @@ export const Navbar = () => {
             <Image
               alt="ABIC Logo"
               height={200}
-              src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}media/abic-realty-logo.png`}
+              src="/abic-realty-logo.png"
               width={200}
             />
           </Link>
