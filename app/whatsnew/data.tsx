@@ -56,7 +56,7 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export const useArticles = () => {
   const { data, error, isLoading } = useSWR(
-    "https://abicmanpowerservicecorp.com/api/main/articles",
+    "https://abicrealtyphdianne.com/api/main/articles",
     fetcher,
   );
 
@@ -69,7 +69,7 @@ export const useArticles = () => {
 
 export const useTestimonials = () => {
   const { data, error, isLoading } = useSWR(
-    "https://abicmanpowerservicecorp.com/api/main/testimonials",
+    "https://abicrealtyphdianne.com/api/main/testimonials",
     fetcher,
   );
 
