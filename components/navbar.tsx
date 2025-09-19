@@ -3,11 +3,14 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { usePWA } from "../hooks/usePWA"; // Import the PWA hook
+import GoogleTranslate from "../components/googleTranslate"; // Import Google Translate component
 
 export const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false); // State to control modal visibility
   const pathname = usePathname(); // Get the current route
+  const { isInstallable, isInstalled, installApp } = usePWA(); // Use PWA hook
 
   // Check if we are on the "Room Planner" page
   const isRoomPlannerPage = pathname === "/room-planner";
@@ -25,6 +28,13 @@ export const Navbar = () => {
     if (e.currentTarget.getAttribute('href') === '/room-planner') {
       e.preventDefault();
       setModalOpen(true); // Open the modal when Room Planner is clicked
+    }
+  };
+
+  const handleInstallAppClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    if (isInstallable) {
+      installApp(); // Trigger PWA install
     }
   };
 
@@ -116,7 +126,7 @@ export const Navbar = () => {
           <ul className="space-y-1 mt-24 md:mt-2 font-medium flex-1">
             {[ 
               { path: "/", label: "Home" },
-              { path: "/about", label: "About Us" },
+              { path: "/about", label: "About Me" },
               { path: "/whatsnew", label: "What's New" },
               { path: "/properties", label: "Properties" },
               { path: "/services", label: "Services" },
@@ -146,11 +156,12 @@ export const Navbar = () => {
               { path: "/submit-property", label: "Submit Property" },
               { path: "/loancalculator", label: "Loan Calculator" },
               {
-                path: "/room-planner", // Updated to open in a modal
+                path: "/room-planner",
                 label: "Room Planner",
+                isRoomPlanner: true,
               },
             ].map((link) => (
-              <li key={link.path}>
+              <li key={link.path || link.label}>
                 <a
                   className={`flex items-center p-2 text-white rounded-lg dark:text-white group ${
                     pathname === link.path
@@ -158,13 +169,68 @@ export const Navbar = () => {
                       : "hover:bg-violet-800 dark:hover:bg-gray-700"
                   }`}
                   href={link.path}
-                  onClick={handleRoomPlannerClick}
+                  onClick={link.isRoomPlanner ? handleRoomPlannerClick : undefined}
                 >
                   <span className="ml-3">{link.label}</span>
                 </a>
               </li>
             ))}
+
+            {/* Install App Button - Only show if app is installable and not installed */}
+            {isInstallable && !isInstalled && (
+              <>
+                {/* Divider line with top spacing */}
+                <div className="mt-12">
+                  <div className="my-10"></div> 
+
+                  <li>
+                    <a
+                      className="flex items-center p-3 rounded-lg cursor-pointer 
+                                border-2 border-purple-500 text-purple-400 font-bold 
+                                shadow-md transition-all duration-300
+                                hover:text-purple-300 hover:border-purple-400 
+                                hover:shadow-[0_0_10px_2px_rgba(168,85,247,0.7)]"
+                      href="#"
+                      onClick={handleInstallAppClick}
+                    >
+                      <svg 
+                        className="w-5 h-5 text-purple-400 mr-2" 
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-2 0V5H5v10h10v-1a1 1 0 112 0v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"/>
+                        <path d="M13 8l-2-2v5a1 1 0 11-2 0V6L7 8a1 1 0 01-1.414-1.414l3-3a1 1 0 011.414 0l3 3A1 1 0 0113 8z"/>
+                      </svg>
+                      <span className="tracking-wide">Install App</span>
+                    </a>
+                  </li>
+                </div>
+              </>
+            )}
+
+            {/* Show "App Installed" if already installed */}
+            {isInstalled && (
+              <li>
+                <div className="flex items-center p-2 text-green-300 rounded-lg">
+                  <svg 
+                    className="w-5 h-5 text-green-300 mr-0" 
+                    fill="currentColor" 
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                  <span className="ml-3">App Installed</span>
+                </div>
+              </li>
+            )}
           </ul>
+
+          {/* Google Translate Component - positioned at bottom left */}
+          <div className="mt-auto mb-4">
+            <GoogleTranslate />
+          </div>
 
           {/* Footer and Chatbot */}
           {!isRoomPlannerPage && (
