@@ -126,7 +126,7 @@ export const Navbar = () => {
           <ul className="space-y-1 mt-24 md:mt-2 font-medium flex-1">
             {[ 
               { path: "/", label: "Home" },
-              { path: "/about", label: "About Me" },
+              { path: "/about", label: "About Us" },
               { path: "/whatsnew", label: "What's New" },
               { path: "/properties", label: "Properties" },
               { path: "/services", label: "Services" },
